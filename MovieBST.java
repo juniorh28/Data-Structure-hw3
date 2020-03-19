@@ -50,7 +50,7 @@ public class MovieBST {//Binary Search Tree
 	}
 	
 	public static void main(String[] args) throws IOException{
-		FileReader reader = new FileReader("C:\\Users\\Junior\\Desktop\\ml-latest-small\\movies.csv");
+		FileReader reader = new FileReader("movies.csv");
 		BufferedReader bufferedReader = new BufferedReader(reader);
 		//Scanner scanner = new Scanner(new File("C:\\Users\\Junior\\Desktop\\ml-latest-small\\movies.csv"));
 		MovieBST movieTree = new MovieBST();//create a BST
