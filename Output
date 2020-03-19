@@ -1,0 +1,6 @@
+1 Toy Story  1995
+movie Id: 1 title: Toy Story  genres: null
+2 Jumanji  1995
+Exception in thread "main" java.lang.NullPointerException
+	at MovieBST.addNode(MovieBST.java:29)
+	at MovieBST.main(MovieBST.java:96)
