@@ -98,13 +98,11 @@ public class MovieBST {//Binary Search Tree
 		
 		
 		movieTree.inOrderTravarseTree(movieTree.root);
-		
-		
-		
-		
+		//the root is the first node so there will never be a left child
+		//need to choose middle node as root
+	
+		bufferedReader.close();
 		//scanner.close();
-		
-		
-		
+	
 	}
 }
