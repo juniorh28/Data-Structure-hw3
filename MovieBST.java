@@ -24,14 +24,14 @@ public class MovieBST {//Binary Search Tree
 						parent.leftChild = newMovie;//create one		
 						return;
 					}
-				focusNode = focusNode.leftChild;
+					focusNode = focusNode.leftChild;
 				}
 				else {
 					if(focusNode.rightChild == null) {//if the focusNode's right child is empty
-											parent.rightChild = newMovie;//create one
+						parent.rightChild = newMovie;//create one
 						return;
 					}
-				focusNode = focusNode.rightChild;
+					focusNode = focusNode.rightChild;
 				}
 			}
 		}
@@ -62,9 +62,8 @@ public class MovieBST {//Binary Search Tree
 		
 		//while(scanner.hasNext()) {
 		String str;
-			while((str=bufferedReader.readLine()) != null) {//lines() is Scanner's hasNext() 
-				//String theLine = bufferedReader.readLine(); //scanner.nextLine();//read in the first line
-				//System.out.println(theLine);
+			while((str=bufferedReader.readLine()) != null) {//readLines() is Scanner's hasNext() but it must be assigned to a string and checked if null 
+				//read in the line then check if its null
 				String[] theLineParsed= str.split(",");//split the line by the commas (,)
 				int movieId=0;
 				String title=null;
@@ -89,15 +88,17 @@ public class MovieBST {//Binary Search Tree
 						releaseYear = Integer.parseInt(tempYear[0]);//only the year
 					}
 					
-					if(i ==3) {// Genres
+					if(i == 2) {// Genres
 						String listOfGenres = theLineParsed[i];
 						genres = listOfGenres.split("\\|");
+						for(int h = 0; h < genres.length; h++)
+						//System.out.println("length of genres is: "+genres.length);
+							//System.out.print(genres[h]+" ");
+						System.out.println();
 					}
 					
 				}//End of for loop
-	
-				
-			//System.out.println(movieId+" "+title+" "+releaseYear);
+
 			movieTree.addNode(movieId, title, releaseYear, genres);//create a new Node using the new information
 		}//End of while loop
 		
