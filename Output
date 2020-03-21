@@ -1,6 +1,58 @@
-1 Toy Story  1995
-movie Id: 1 title: Toy Story  genres: null
-2 Jumanji  1995
-Exception in thread "main" java.lang.NullPointerException
-	at MovieBST.addNode(MovieBST.java:29)
-	at MovieBST.main(MovieBST.java:96)
+Adventure Animation Children Comedy Fantasy 
+Adventure Children Fantasy 
+Comedy Romance 
+Comedy Drama Romance 
+Comedy 
+Action Crime Thriller 
+Comedy Romance 
+Adventure Children 
+Action 
+Action Adventure Thriller 
+Comedy Drama Romance 
+Comedy Horror 
+Adventure Animation Children 
+Drama 
+Action Adventure Romance 
+Crime Drama 
+Drama Romance 
+Comedy 
+Comedy 
+Action Comedy Crime Drama Thriller 
+Comedy Crime Thriller 
+Crime Drama Horror Mystery Thriller 
+Action Crime Thriller 
+Drama Sci-Fi 
+Drama Romance 
+Drama 
+Children Drama 
+Drama Romance 
+Adventure Drama Fantasy Mystery Sci-Fi 
+movie Id: 1 title: Toy Story  genres: [Ljava.lang.String;@7852e922
+movie Id: 2 title: Jumanji  genres: [Ljava.lang.String;@4e25154f
+movie Id: 3 title: Grumpier Old Men  genres: [Ljava.lang.String;@70dea4e
+movie Id: 4 title: Waiting to Exhale  genres: [Ljava.lang.String;@5c647e05
+movie Id: 5 title: Father of the Bride Part II  genres: [Ljava.lang.String;@33909752
+movie Id: 6 title: Heat  genres: [Ljava.lang.String;@55f96302
+movie Id: 7 title: Sabrina  genres: [Ljava.lang.String;@3d4eac69
+movie Id: 8 title: Tom and Huck  genres: [Ljava.lang.String;@42a57993
+movie Id: 9 title: Sudden Death  genres: [Ljava.lang.String;@75b84c92
+movie Id: 10 title: GoldenEye  genres: [Ljava.lang.String;@6bc7c054
+movie Id: 11 title: "American President The  genres: [Ljava.lang.String;@232204a1
+movie Id: 12 title: Dracula: Dead and Loving It  genres: [Ljava.lang.String;@4aa298b7
+movie Id: 13 title: Balto  genres: [Ljava.lang.String;@7d4991ad
+movie Id: 14 title: Nixon  genres: [Ljava.lang.String;@28d93b30
+movie Id: 15 title: Cutthroat Island  genres: [Ljava.lang.String;@1b6d3586
+movie Id: 16 title: Casino  genres: [Ljava.lang.String;@4554617c
+movie Id: 17 title: Sense and Sensibility  genres: [Ljava.lang.String;@74a14482
+movie Id: 18 title: Four Rooms  genres: [Ljava.lang.String;@1540e19d
+movie Id: 19 title: Ace Ventura: When Nature Calls  genres: [Ljava.lang.String;@677327b6
+movie Id: 20 title: Money Train  genres: [Ljava.lang.String;@14ae5a5
+movie Id: 21 title: Get Shorty  genres: [Ljava.lang.String;@7f31245a
+movie Id: 22 title: Copycat  genres: [Ljava.lang.String;@6d6f6e28
+movie Id: 23 title: Assassins  genres: [Ljava.lang.String;@135fbaa4
+movie Id: 24 title: Powder  genres: [Ljava.lang.String;@45ee12a7
+movie Id: 25 title: Leaving Las Vegas  genres: [Ljava.lang.String;@330bedb4
+movie Id: 26 title: Othello  genres: [Ljava.lang.String;@2503dbd3
+movie Id: 27 title: Now and Then  genres: [Ljava.lang.String;@4b67cf4d
+movie Id: 28 title: Persuasion  genres: [Ljava.lang.String;@7ea987ac
+movie Id: 29 title: City of Lost Children. The {CitÃ© des enfants perdus. La}  genres: [Ljava.lang.String;@12a3a380
