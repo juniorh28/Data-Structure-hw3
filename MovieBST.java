@@ -8,28 +8,30 @@ public class MovieBST {//Binary Search Tree
 	public void addNode(int movieId, String title, int releaseYear, String[] genres) {//will add a new node to the tree
 		
 		Movie newMovie = new Movie(movieId, title, releaseYear, genres);
+		
 		if(root == null) {//if the root doesn't exist
 			root = newMovie;//create one
-			System.out.println(root.toString());
 		}
+		
 		else {
 			Movie focusNode = root;
 			Movie parent;
 			while(true) {
 				parent = focusNode;
 				if(movieId < focusNode.getMovieId()) {//compare parent's id with the focusNode
-					focusNode = focusNode.leftChild;
+					
 					if(focusNode.leftChild == null) {//if the focusNode's left child is empty
-						parent.leftChild = newMovie;//create one
+						parent.leftChild = newMovie;//create one		
 						return;
 					}
+				focusNode = focusNode.leftChild;
 				}
 				else {
-					focusNode = focusNode.rightChild;
 					if(focusNode.rightChild == null) {//if the focusNode's right child is empty
-						parent.rightChild = newMovie;//create one
+											parent.rightChild = newMovie;//create one
 						return;
 					}
+				focusNode = focusNode.rightChild;
 				}
 			}
 		}
@@ -37,12 +39,13 @@ public class MovieBST {//Binary Search Tree
 	}
 	
 	public void inOrderTravarseTree(Movie focusNode) {
-		if(focusNode != null) {
+		if(focusNode == null) {
+			return;		}
+		else {
 			inOrderTravarseTree(focusNode.leftChild);
 			System.out.println(focusNode);
 			inOrderTravarseTree(focusNode.rightChild);
-		}
-			
+		}	
 	}
 	
 	public void subSet(String start, String end) {
@@ -50,7 +53,7 @@ public class MovieBST {//Binary Search Tree
 	}
 	
 	public static void main(String[] args) throws IOException{
-		FileReader reader = new FileReader("movies.csv");
+		FileReader reader = new FileReader("C:\\Users\\Junior\\Desktop\\ml-latest-small\\movies2.csv");
 		BufferedReader bufferedReader = new BufferedReader(reader);
 		//Scanner scanner = new Scanner(new File("C:\\Users\\Junior\\Desktop\\ml-latest-small\\movies.csv"));
 		MovieBST movieTree = new MovieBST();//create a BST
@@ -58,42 +61,44 @@ public class MovieBST {//Binary Search Tree
 		//bufferedReader.nextLine();
 		
 		//while(scanner.hasNext()) {
-			while(bufferedReader.lines() != null) {
-			String theLine = bufferedReader.readLine(); //scanner.nextLine();//read in the first line
-			String[] theLineParsed= theLine.split(",");//split the line by the commas (,)
-			int movieId=0;
-			String title=null;
-			int releaseYear=0;
-			String[] genres=null;
-			
-			for(int i = 0; i< theLineParsed.length; i++) {
+		String str;
+			while((str=bufferedReader.readLine()) != null) {//lines() is Scanner's hasNext() 
+				//String theLine = bufferedReader.readLine(); //scanner.nextLine();//read in the first line
+				//System.out.println(theLine);
+				String[] theLineParsed= str.split(",");//split the line by the commas (,)
+				int movieId=0;
+				String title=null;
+				int releaseYear=0;
+				String[] genres=null;
 				
-				if(i == 0)//movie Ids
-					movieId = Integer.parseInt(theLineParsed[i]);
-				
-				if(i == 1) {// Title and Year
+				for(int i = 0; i< theLineParsed.length; i++) {
 					
-					String[] titleAndYear = theLineParsed[i].split("\\(");
-					//before: title (year)
-					//after: title year) removes the open parantheses
+					if(i == 0)//movie Ids
+						movieId = Integer.parseInt(theLineParsed[i]);
 					
-					title = titleAndYear[0];//only title
-					String[] tempYear = titleAndYear[1].split("\\)");
-					//before: title year)
-					//after: title year removes the closed parantheses
-					releaseYear = Integer.parseInt(tempYear[0]);//only the year
-				}
+					if(i == 1) {// Title and Year
+						
+						String[] titleAndYear = theLineParsed[i].split("\\(");
+						//before: title(year)
+						//after: title year) removes the open parantheses
+						
+						title = titleAndYear[0];//only title
+						String[] tempYear = titleAndYear[1].split("\\)");
+						//before: title year)
+						//after: title year removes the closed parantheses
+						releaseYear = Integer.parseInt(tempYear[0]);//only the year
+					}
+					
+					if(i ==3) {// Genres
+						String listOfGenres = theLineParsed[i];
+						genres = listOfGenres.split("\\|");
+					}
+					
+				}//End of for loop
+	
 				
-				if(i ==3) {// Genres
-					String listOfGenres = theLineParsed[i];
-					genres = listOfGenres.split("\\|");
-				}
-				
-			}//End of for loop
-
-			
-		System.out.println(movieId+" "+title+" "+releaseYear);
-		movieTree.addNode(movieId, title, releaseYear, genres);//create a new Node using the new information
+			//System.out.println(movieId+" "+title+" "+releaseYear);
+			movieTree.addNode(movieId, title, releaseYear, genres);//create a new Node using the new information
 		}//End of while loop
 		
 		
